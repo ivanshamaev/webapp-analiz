@@ -1,1 +1,46 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
+
+/* App.css */
+
+/* Общие стили для формы */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /*max-width: 400px;*/
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Стили для группы показателей */
+  .parameter-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Стили для названия показателя */
+  .parameter-label {
+    flex: 1;
+    font-weight: bold;
+  }
+  
+  /* Стили для поля ввода значения */
+  .parameter-input {
+    flex: 2;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Стили для единицы измерения показателя */
+  .parameter-unit {
+    flex: 1;
+    font-size: 0.9em;
+    color: #555;
+  }
+  
