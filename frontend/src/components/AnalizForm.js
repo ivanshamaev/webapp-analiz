@@ -3,9 +3,56 @@ import axios from 'axios';
 import { OverlayTrigger, Tooltip, Form } from 'react-bootstrap';
 
 function AnalizForm() {
-    const renderTooltip = (text) => (
-      <Tooltip id="tooltip">{text}</Tooltip>
-    );
+    
+  const [isChecked, setIsChecked] = useState(false);
+
+  const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
+  
+  const handleCheckboxChange = (event) => {
+    setIsChecked(!isChecked);
+    //для жалоб
+    const value = event.target.value;
+    if (selectedCheckboxes.includes(value)) {
+      setSelectedCheckboxes(selectedCheckboxes.filter(item => item !== value));
+    } else {
+      setSelectedCheckboxes([...selectedCheckboxes, value]);
+    }
+  };
+
+  // Жалобы Start ----------------------------------------
+
+  const checkboxes = [
+    'Головная боль',
+    'Слабость',
+    'Бессоница',
+    'Тошнота',
+    'Головокружение',
+    'Другое (мы учтем в доработке алгоритма)',
+  ];
+
+  const columnCount = 3;
+  const checkboxesPerColumn = Math.ceil(checkboxes.length / columnCount);
+
+  const checkboxColumns = Array.from({ length: columnCount }, (_, columnIndex) => (
+    <div key={columnIndex} className="col">
+      {checkboxes.slice(columnIndex * checkboxesPerColumn, (columnIndex + 1) * checkboxesPerColumn).map((checkbox, index) => (
+        <div key={index} className="form-check">
+          <input
+            type="checkbox"
+            className="form-check-input"
+            id={`checkbox-${index}`}
+            value={checkbox}
+            checked={selectedCheckboxes.includes(checkbox)}
+            onChange={handleCheckboxChange}
+          />
+          <label className="form-check-label" htmlFor={`checkbox-${index}`}>
+            {checkbox}
+          </label>
+        </div>
+      ))}
+    </div>
+  ));
+  // Жалобы End ----------------------------------------
 
   return (
     <div className="container">
@@ -32,6 +79,16 @@ function AnalizForm() {
           </div>
         </div>
 
+        <hr/>
+        <div className="form-container">
+          <h3>Наличие жалоб</h3>
+          <div className="parameter-group">
+            <div className="row">
+              {checkboxColumns}
+            </div>
+          </div>
+        </div>
+        
         <hr/>
 
         <div className="form-container">
@@ -83,9 +140,6 @@ function AnalizForm() {
             <input id="platelets" className="parameter-input" type="number" step="0.1" />
             <span className="parameter-unit">тыс/мкл</span>
           </div>
-
-
-
 
           <div className="parameter-group">
             <span className="parameter-label">Лейкоциты</span>
@@ -160,8 +214,32 @@ function AnalizForm() {
           </div>
 
         </div>
-
-        <button type="submit" className="btn btn-primary">Получить расшифровку показателей</button>
+        <div>
+          <div>
+            <label>
+              <input
+                type="checkbox"
+                checked={isChecked}
+                onChange={handleCheckboxChange}
+              />
+              Я согласен с тем, что администрация сайта не несет ответственности за возможные отрицательные последствия, 
+              возникшие в результате самостоятельной интерпретации своих анализов и назначения лечения или бездействия. 
+              Я понимаю, что результаты расшифровки анализов носят только информационный характер, не являются диагнозом 
+              и не заменяют очной консультации врача.
+            </label>
+          </div>
+          <hr/>
+          <div>
+            <button
+              type="submit"
+              className="btn btn-primary"
+              disabled={!isChecked}
+            >
+              Получить расшифровку показателей
+            </button>
+          </div>
+        </div>
+        
 
       </Form>
     </div>

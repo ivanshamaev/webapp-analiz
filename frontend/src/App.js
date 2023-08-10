@@ -4,6 +4,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Content from './components/Content';
 import AnalizForm from './components/AnalizForm';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <Content />
       <AnalizForm />
+      <Footer />
     </div>
   );
 }
