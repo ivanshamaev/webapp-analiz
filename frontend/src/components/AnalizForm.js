@@ -46,20 +46,20 @@ function AnalizForm() {
 
             <div className="col">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                <label class="form-check-label" for="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" value="" id="id_1" />
+                <label class="form-check-label" for="id_1">
                   Пониженная температура
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
-                <label class="form-check-label" for="flexCheckChecked">
+                <input class="form-check-input" type="checkbox" value="" id="id_2" />
+                <label class="form-check-label" for="id_2">
                   Повышенная температура
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
-                <label class="form-check-label" for="flexCheckChecked">
+                <input class="form-check-input" type="checkbox" value="" id="id_3" />
+                <label class="form-check-label" for="id_3">
                   Головокружение
                 </label>
               </div>
@@ -67,20 +67,20 @@ function AnalizForm() {
 
             <div className="col">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                <label class="form-check-label" for="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" value="" id="id_4" />
+                <label class="form-check-label" for="id_4">
                   Головная боль
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
-                <label class="form-check-label" for="flexCheckChecked">
+                <input class="form-check-input" type="checkbox" value="" id="id_5" />
+                <label class="form-check-label" for="id_5">
                   Слабость
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
-                <label class="form-check-label" for="flexCheckChecked">
+                <input class="form-check-input" type="checkbox" value="" id="id_6" />
+                <label class="form-check-label" for="id_6">
                   Другое (мы учтем в доработке алгоритма)
                 </label>
               </div>
@@ -88,14 +88,14 @@ function AnalizForm() {
 
             <div className="col">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                <label class="form-check-label" for="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" value="" id="id_7" />
+                <label class="form-check-label" for="id_7">
                   Бессоница
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
-                <label class="form-check-label" for="flexCheckChecked">
+                <input class="form-check-input" type="checkbox" value="" id="id_8" />
+                <label class="form-check-label" for="id_8">
                   Тошнота
                 </label>
               </div>
