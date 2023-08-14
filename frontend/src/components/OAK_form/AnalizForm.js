@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-import { OverlayTrigger, Tooltip, Form } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 
 import MetricInput from './MetricInput';
 
 function AnalizForm() {
     
   const [isChecked, setIsChecked] = useState(false);
-
-  const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
   
   const handleCheckboxChange = (event) => {
     setIsChecked(!isChecked);
