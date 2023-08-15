@@ -1,0 +1,48 @@
+server {
+    server_name analiz-krovi-online.ru www.analiz-krovi-online.ru;
+
+    root /var/www/analiz-krovi-online.ru/html;
+    index index.html;
+
+    location / {
+        try_files $uri /index.html;
+    }
+
+    # Дополнительные настройки могут быть добавлены здесь
+
+    location ~* \.(?:ico|css|js|gif|jpe?g|png)$ {
+        expires max;
+        add_header Cache-Control "public, max-age=31536000";
+    }
+
+    location ~* \.(?:svg|woff2?)$ {
+        add_header Access-Control-Allow-Origin "*";
+    }
+
+    # Другие настройки безопасности и оптимизации могут быть добавлены здесь
+
+    #location ~ /\.ht {
+    #    deny all;
+    #}
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/analiz-krovi-online.ru/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/analiz-krovi-online.ru/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+server {
+    if ($host = analiz-krovi-online.ru) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    listen 80;
+    server_name analiz-krovi-online.ru www.analiz-krovi-online.ru;
+    return 301 https://analiz-krovi-online.ru;
+    #return 404; # managed by Certbot
+
+    # Редирект с HTTP на HTTPS
+    #return 301 https://analiz-krovi-online.ru;    
+}

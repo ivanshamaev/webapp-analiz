@@ -6,6 +6,18 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://analiz-krovi-online.ru/</loc>
-  <lastmod>2023-08-11T07:44:26+00:00</lastmod>
+  <lastmod>2023-08-15T07:44:26+00:00</lastmod>
+</url>
+<url>
+  <loc>https://analiz-krovi-online.ru/blog</loc>
+  <lastmod>2023-08-15T07:44:26+00:00</lastmod>
+</url>
+<url>
+  <loc>https://analiz-krovi-online.ru/blog/rasshifrovka-obshhego-analiza-krovi</loc>
+  <lastmod>2023-08-15T07:44:26+00:00</lastmod>
+</url>
+<url>
+  <loc>https://analiz-krovi-online.ru/blog/rasshifrovka-rezultatov-biohimicheskogo-analiza-krovi</loc>
+  <lastmod>2023-08-15T07:44:26+00:00</lastmod>
 </url>
 </urlset>

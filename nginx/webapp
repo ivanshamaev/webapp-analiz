@@ -2,6 +2,9 @@ server {
     listen 80;
     server_name analiz-krovi-online.ru www.analiz-krovi-online.ru;
 
+    # Редирект с HTTP на HTTPS
+    return 301 https://analiz-krovi-online.ru;
+
     root /var/www/analiz-krovi-online.ru/html;
     index index.html;
 
