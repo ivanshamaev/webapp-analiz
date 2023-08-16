@@ -5,13 +5,13 @@ const MetricInput = ({ metricName, unitOfMeasurement, idInput }) => {
     <div className="row">
         <div className="col">
             <div className="row">
-            <div className="col-sm-3">
+            <div className="col-sm-4">
                 <label className="form-label">{metricName}</label>
             </div>
-            <div className="col-sm-3 input-group-sm">
+            <div className="col-sm-4 input-group-sm">
                 <input id={idInput} type="number" step="0.1" className="form-control" placeholder="Введите значение" />
             </div>
-            <div className="col-sm-2">
+            <div className="col-sm-4">
                 <label className="form-label">{unitOfMeasurement}</label>
             </div>
             </div>
