@@ -121,26 +121,28 @@ function AnalizForm() {
         <Col sm={7}>
           <div className="form-container">
             <h3>Значения показателей</h3>
-            <MetricInput metricName="Гематокрит" unitOfMeasurement="%" idInput="hematocrit" />
-            <MetricInput metricName="Гемоглобин" unitOfMeasurement="г/дл" idInput="hemoglobin" />
-            <MetricInput metricName="Эритроциты" unitOfMeasurement="млн/мкл" idInput="redBloodCells" />
-            <MetricInput metricName="MCV (ср. объем эритр.)" unitOfMeasurement="фл" idInput="mcv" />
-            <MetricInput metricName="RDW (шир. распред. эритр)" unitOfMeasurement="%" idInput="rdw" />
-            <MetricInput metricName="MCH (ср. содер. Hb в эр.)" unitOfMeasurement="пг" idInput="mch" />
-            <MetricInput metricName="МСHС (ср. конц. Hb в эр.)" unitOfMeasurement="%" idInput="mchc" />
-            <MetricInput metricName="Тромбоциты" unitOfMeasurement="тыс/мкл" idInput="platelets" />
-            <MetricInput metricName="Лейкоциты" unitOfMeasurement="тыс/мкл" idInput="leukocytes" />
+            <MetricInput metricName="Гематокрит (HCT)" unitOfMeasurement="%" idInput="hematocrit" />
+            <MetricInput metricName="Гемоглобин (Hb)" unitOfMeasurement="г/дл" idInput="hemoglobin" />
+            <MetricInput metricName="Эритроциты (RBC)" unitOfMeasurement="млн/мкл" idInput="redBloodCells" />
+            <MetricInput metricName="Средний объем эритроцита (MCV)" unitOfMeasurement="фл" idInput="mcv" />
+            <MetricInput metricName="Ширина распределения эритроцитов (RDW)" unitOfMeasurement="%" idInput="rdw" />
+            <MetricInput metricName="Среднее содержание гемоглобина в эритроците (MCH)" unitOfMeasurement="пг" idInput="mch" />
+            <MetricInput metricName="Средняя концентрация гемоглобина в эритроцитах (MCHC)" unitOfMeasurement="%" idInput="mchc" />
+            <MetricInput metricName="Тромбоциты (PLT)" unitOfMeasurement="тыс/мкл" idInput="plt" />
+            <MetricInput metricName="Тромбокрит (PCT)" unitOfMeasurement="%" idInput="pct" />
+            <MetricInput metricName="Средний объем тромбоцита (MPV)" unitOfMeasurement="фл" idInput="mpv" />
+            <MetricInput metricName="Лейкоциты (WBC)" unitOfMeasurement="тыс/мкл" idInput="leukocytes" />
             <MetricInput metricName="Нейтрофилы (общ.число)" unitOfMeasurement="%" idInput="neutrophilsPercent" />
-            <MetricInput metricName="Лимфоциты" unitOfMeasurement="%" idInput="lymphocytesPercent" />
-            <MetricInput metricName="Моноциты" unitOfMeasurement="%" idInput="monocytesPercent" />
-            <MetricInput metricName="Эозинофилы" unitOfMeasurement="%" idInput="eosinophilsPercent" />
-            <MetricInput metricName="Базофилы" unitOfMeasurement="%" idInput="basophilsPercent" />
+            <MetricInput metricName="Лимфоциты (LYM%)" unitOfMeasurement="%" idInput="lymphocytesPercent" />
+            <MetricInput metricName="Моноциты (MON%)" unitOfMeasurement="%" idInput="monocytesPercent" />
+            <MetricInput metricName="Эозинофилы (EO%)" unitOfMeasurement="%" idInput="eosinophilsPercent" />
+            <MetricInput metricName="Базофилы (BA%)" unitOfMeasurement="%" idInput="basophilsPercent" />
             <MetricInput metricName="Нейтрофилы, абс." unitOfMeasurement="тыс/мкл" idInput="neutrophilsAbsolute" />
             <MetricInput metricName="Лимфоциты, абс." unitOfMeasurement="тыс/мкл" idInput="lymphocytesAbsolute" />
             <MetricInput metricName="Моноциты, абс." unitOfMeasurement="тыс/мкл" idInput="monocytesAbsolute" />
             <MetricInput metricName="Эозинофилы, абс." unitOfMeasurement="тыс/мкл" idInput="eosinophilsAbsolute" />
             <MetricInput metricName="Базофилы, абс." unitOfMeasurement="тыс/мкл" idInput="basophilsAbsolute" />
-            <MetricInput metricName="СОЭ" unitOfMeasurement="мм/ч" idInput="esr" />
+            <MetricInput metricName="СОЭ - Скорость оседания эритроцитов (ESR)" unitOfMeasurement="мм/ч" idInput="esr" />
           </div>
 
           <br/> 
